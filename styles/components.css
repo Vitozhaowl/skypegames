@@ -1,0 +1,30 @@
+.navbar-link {
+    position: relative;
+}
+
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #60a5fa;
+    transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after {
+    width: 100%;
+}
+
+.featured-game-gradient {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+}
+
+.category-icon {
+    transition: transform 0.2s ease;
+}
+
+.category-item:hover .category-icon {
+    transform: scale(1.1);
+}
