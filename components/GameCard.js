@@ -26,9 +26,9 @@ function GameCard({ game, onActionClick }) {
                         ))}
                     </div>
                     <button 
-                        data-name="login-button" 
-                        onClick={onLoginClick}
-                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium"
+                        data-name="play-button"
+                        onClick={onActionClick}
+                        className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition duration-200"
                     >
                         Play Now
                     </button>
