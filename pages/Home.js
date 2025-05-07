@@ -17,7 +17,12 @@ function Home() {
                                     <div className="rounded-md shadow">
                                         <button className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
                                             Get Started
-                                        </button>
+            
+                                        </button
+                                data-name="login-button" 
+                                onClick={onLoginClick}
+                                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium"
+            >
                                     </div>
                                 </div>
                             </div>
