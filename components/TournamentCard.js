@@ -1,4 +1,4 @@
-function TournamentCard({ tournament }) {
+function TournamentCard({ tournament, onActionClick }) {
     try {
         return (
             <div data-name="tournament-card" className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
@@ -11,6 +11,7 @@ function TournamentCard({ tournament }) {
                             {tournament.status.toUpperCase()}
                         </span>
                     </div>
+                    <p className="text-gray-400 text-sm mb-4">{tournament.description}</p>
                     <div className="space-y-3">
                         <p data-name="tournament-game" className="text-gray-400">
                             <i className="fas fa-gamepad mr-2"></i>
@@ -18,11 +19,11 @@ function TournamentCard({ tournament }) {
                         </p>
                         <p data-name="tournament-prize" className="text-yellow-500">
                             <i className="fas fa-trophy mr-2"></i>
-                            Prize Pool: ${tournament.prizePool}
+                            Prize Pool: ${tournament.prizePool.toLocaleString()}
                         </p>
                         <p data-name="tournament-players" className="text-gray-400">
                             <i className="fas fa-users mr-2"></i>
-                            {tournament.players} Players Registered
+                            {tournament.players.toLocaleString()} Players Registered
                         </p>
                         <p data-name="tournament-date" className="text-gray-400">
                             <i className="fas fa-calendar mr-2"></i>
@@ -31,6 +32,7 @@ function TournamentCard({ tournament }) {
                     </div>
                     <button 
                         data-name="join-button"
+                        onClick={onActionClick}
                         className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition duration-200"
                     >
                         Join Tournament

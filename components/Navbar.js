@@ -1,4 +1,4 @@
-function Navbar() {
+function Navbar({ onLoginClick }) {
     try {
         const { currentPath, navigate } = useRouter();
 
@@ -42,7 +42,11 @@ function Navbar() {
                             </div>
                         </div>
                         <div className="flex items-center">
-                            <button data-name="login-button" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+                            <button 
+                                data-name="login-button" 
+                                onClick={onLoginClick}
+                                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium"
+                            >
                                 Login
                             </button>
                         </div>

@@ -3,75 +3,83 @@ function Tournaments() {
         const tournaments = [
             {
                 id: 1,
-                title: "Space Warriors Championship",
-                game: "Space Warriors",
+                title: "Galactic Conquest Championship",
+                game: "Galactic Conquest",
                 status: "live",
-                prizePool: 10000,
-                players: 128,
-                date: "Live Now"
+                prizePool: 25000,
+                players: 256,
+                date: "Live Now",
+                description: "The ultimate space strategy showdown"
             },
             {
                 id: 2,
-                title: "Dragon Quest League",
-                game: "Dragon Quest Online",
+                title: "Mythic Legends World Cup",
+                game: "Mythic Legends",
                 status: "upcoming",
-                prizePool: 5000,
-                players: 64,
-                date: "Starts in 2 days"
+                prizePool: 50000,
+                players: 512,
+                date: "Starts in 2 days",
+                description: "Global PvP championship"
             },
             {
                 id: 3,
-                title: "Racing Evolution Cup",
-                game: "Racing Evolution",
+                title: "Velocity Rush Grand Prix",
+                game: "Velocity Rush",
                 status: "upcoming",
-                prizePool: 7500,
-                players: 32,
-                date: "Starts in 5 days"
+                prizePool: 15000,
+                players: 128,
+                date: "Starts in 5 days",
+                description: "High-stakes racing tournament"
             },
             {
                 id: 4,
-                title: "Cyber Strike Masters",
-                game: "Cyber Strike",
+                title: "Special Ops Elite League",
+                game: "Special Ops Elite",
                 status: "live",
-                prizePool: 15000,
-                players: 256,
-                date: "Live Now"
+                prizePool: 35000,
+                players: 320,
+                date: "Live Now",
+                description: "Professional tactical team competition"
             },
             {
                 id: 5,
-                title: "Medieval Tournament",
-                game: "Medieval Kingdoms",
+                title: "Cyber Revolution Masters",
+                game: "Cyber Revolution",
                 status: "upcoming",
-                prizePool: 8000,
-                players: 128,
-                date: "Starts in 1 week"
+                prizePool: 20000,
+                players: 256,
+                date: "Starts in 1 week",
+                description: "Solo cyberpunk championship"
             },
             {
                 id: 6,
-                title: "Pixel Survivors Challenge",
-                game: "Pixel Survivors",
+                title: "Kingdom Wars Siege Masters",
+                game: "Kingdom Wars",
                 status: "upcoming",
-                prizePool: 3000,
-                players: 64,
-                date: "Starts in 3 days"
+                prizePool: 30000,
+                players: 128,
+                date: "Starts in 3 days",
+                description: "Medieval strategy tournament"
             },
             {
                 id: 7,
-                title: "Ocean Explorer Competition",
-                game: "Ocean Explorer",
+                title: "Rogue Legacy Challenge",
+                game: "Rogue Legacy",
                 status: "upcoming",
-                prizePool: 2500,
-                players: 32,
-                date: "Starts in 6 days"
+                prizePool: 10000,
+                players: 64,
+                date: "Starts in 6 days",
+                description: "Speedrunning competition"
             },
             {
                 id: 8,
-                title: "Zombie Defense League",
-                game: "Zombie Defense",
+                title: "Wasteland Survivors Battle Royale",
+                game: "Wasteland Survivors",
                 status: "live",
-                prizePool: 5000,
-                players: 128,
-                date: "Live Now"
+                prizePool: 40000,
+                players: 1000,
+                date: "Live Now",
+                description: "Massive survival tournament"
             }
         ];
 
@@ -87,7 +95,7 @@ function Tournaments() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {tournaments.map(tournament => (
-                            <TournamentCard key={tournament.id} tournament={tournament} />
+                            <TournamentCard key={tournament.id} tournament={tournament} onActionClick={() => onActionClick()} />
                         ))}
                     </div>
                 </div>
